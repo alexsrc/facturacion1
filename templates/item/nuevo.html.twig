@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {#<h3 class="text-center"><b>Nuevo Usuarios</b></h3><br>
+
+        <div class="row">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+        </div>
+#}
+
+
+
+
+
+    <h3 class="text-center"><b>Nuevo Usuarios</b></h3>
+    <br>
+    <div style="margin-right: 1%; margin-left: 1%">
+        {{ form_start(form) }}
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fa fa-id-badge"></i> <b>Codigo Producto</b> <br>
+                <label for="" style="color: red;" id=""></label>
+                {{ form_widget(form.codigoItem, {'attr':{'class':'form-control'}}) }}
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-user"></i> <b>Nombre Producto </b> <br>
+                <label for="" style="color: red;" id=""></label>
+                {{ form_widget(form.nombreProducto, {'attr':{'class':'form-control'}}) }}
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-user"></i>   <b> Valor</b>  <br>
+                <label for="" style="color: red;" id="errorcodigo"></label>
+                {{ form_widget(form.valor, {'attr':{'class':'form-control'}}) }}
+            </div>
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fa fa-user"></i>   <b> Iva</b> <br>
+                <label for="" style="color: red;" id=""></label>
+                {{ form_widget(form.iva, {'attr':{'class':'form-control'}}) }}
+            </div>
+        </div>
+        <br>
+        <center>
+            {{ form_widget(form.btnEnviar, {'attr':{'class':'btn btn-primary'}}) }}</center>
+        {{ form_end(form) }}
+    </div>
+
+
+
+    {#{{ form_widget(form.apellido2) }}#}
+    {#{{ form_widget(form.fechaNacimiento) }}#}
+    {#{{ form_widget(form.telefono) }}#}
+    {#{{ form_widget(form.btnEnviar) }}#}
+    {#{{ form_rest(form) }}#}
+
+{% endblock %}
